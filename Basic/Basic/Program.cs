@@ -92,6 +92,20 @@ namespace Basic
             Console.WriteLine(min);
             Console.WriteLine(money);
             Console.WriteLine(floor);
+
+            ///////////////////////////////////////////////////////////////
+            // scope
+            var p = 1;
+            {
+                var someNumber = 23 + p;
+                Console.WriteLine(someNumber);
+                var otherNumer = 2;
+            }
+            {
+                var someNumber = 23.4;
+                //var p = 323 + otherNumer;                
+                Console.WriteLine(someNumber);
+            }
         }
     }
 }
