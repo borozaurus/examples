@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -81,7 +82,7 @@ namespace Strings
             var text8_2 = @"c:\this\is\path";
 
             Console.WriteLine(text8_2);
-
+            
             ///////////////////////////////////////////////////////////////
             // some operations
             var text9 = "this is string";
@@ -91,6 +92,20 @@ namespace Strings
             Console.WriteLine(text9.Replace("is", "IS"));
             Console.WriteLine(text9.Contains("is"));
             Console.WriteLine(text9.IndexOf("is"));
+
+            ///////////////////////////////////////////////////////////////
+            // converting
+            var text10 = "" +  10;
+            Console.WriteLine(text10);
+
+            var text11 = "10";
+            int i = int.Parse(text11);
+            Console.WriteLine(i+1);
+
+            var text12 = "10.32";
+            var d = double.Parse(text12);
+            Console.WriteLine(d);
+
 
             ///////////////////////////////////////////////////////////////
             // some operations
