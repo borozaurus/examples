@@ -46,6 +46,17 @@ namespace Basic
             age -= 2;       // age = age - 2
             Console.WriteLine(age);
 
+            ///////////////////////////////////////////////////////////////
+            // / %
+            int people = 11;
+            int rooms = 5;
+
+            int peopleByRoom = people/rooms;
+            int restOfPeople = people%rooms;
+
+            Console.WriteLine(peopleByRoom);
+            Console.WriteLine(restOfPeople);
+
 
             ///////////////////////////////////////////////////////////////
             // ++
