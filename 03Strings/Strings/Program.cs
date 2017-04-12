@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Strings
@@ -93,6 +94,8 @@ namespace Strings
             Console.WriteLine(text9.Contains("is"));
             Console.WriteLine(text9.IndexOf("is"));
 
+            Console.WriteLine("this, is other text,".Replace(",",string.Empty));
+            
             ///////////////////////////////////////////////////////////////
             // converting
             var text10 = "" +  10;
