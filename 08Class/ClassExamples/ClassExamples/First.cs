@@ -18,18 +18,22 @@ namespace ClassExamples
             }
             set
             {
+                if (value < 0)
+                    throw new Exception("thios should be >=0");
+               
                 _someNumer = value;
             }
         }
 
-        public First()
+        public First(int i)
         {
-            SomeNumber = 4;
+            SomeNumber = i;
         }
 
-        public void DoSomething(int i)
+        public int DoSomething(int incre)
         {
-            SomeNumber += i;
+            SomeNumber += incre;
+            return 9;
         }
     }
 
@@ -37,7 +41,8 @@ namespace ClassExamples
     {
         public static void DoTest()
         {
-            var first = new First();
+            var first = new First(3);
+            first.SomeNumber = 2323;
             first.DoSomething(2);
             
             System.Console.WriteLine($"This is a number {first.SomeNumber}");

@@ -9,6 +9,7 @@ namespace ClassExamples
     public class WithDefault
     {
         private int _sum = 0;
+        
 
         public void AddNumer(int a, int b = 0, int c = 0)
         {
@@ -26,6 +27,14 @@ namespace ClassExamples
     public class WithParams
     {
         private int _sum = 0;
+
+        public void AddNumerArra(int[] a)
+        {
+            foreach (var i in a)
+            {
+                _sum += i;
+            }
+        }
 
         public void AddNumer(params int[] a)
         {
@@ -50,13 +59,15 @@ namespace ClassExamples
             defaults.AddNumer(5);
             defaults.AddNumer(5, 6);
             defaults.AddNumer(5, c: 7);
-            System.Console.WriteLine(""+ defaults.Result());
+            System.Console.WriteLine("" + defaults.Result());
 
             var param = new WithParams();
             param.AddNumer(5);
             param.AddNumer(5, 6);
             param.AddNumer(5, 6, 7);
             param.AddNumer(5, 6, 7, 8);
+            param.AddNumer(4, 3, 2, 1, 4, 5);
+            param.AddNumerArra(new int[] { 3, 2, 3 });
             System.Console.WriteLine("" + param.Result());
         }
     }

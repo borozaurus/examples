@@ -46,6 +46,8 @@ namespace ClassExamples
                 Console.WriteLine($"Your first t-shirt was {myFirs.Size} and now {current.Size}");
             }
 
+            //add switch
+
             var asNumer = (int)myFirs.Size;
             Console.WriteLine(asNumer);
 

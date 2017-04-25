@@ -43,6 +43,8 @@ namespace ClassExamples
             second.AddLine(3);
             second.AddLine(3.5);
             second.AddLine("boom");
+
+
             Console.WriteLine(second.ReturnAll());
         }
     }
