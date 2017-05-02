@@ -29,7 +29,9 @@ namespace OOPExamples.Inter
     {
         public static void DoTest()
         {
-            new Processing(new DBDataProvider()).Print();
+            var db = new DBDataProvider();
+            db.DoDBStuff();
+            new Processing(db).Print();
 
             new Processing(new MemoryDataProvider()).Print();
         }

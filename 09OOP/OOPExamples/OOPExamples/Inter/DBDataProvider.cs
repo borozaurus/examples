@@ -12,8 +12,14 @@ namespace OOPExamples.Inter
         {
             return new List<Person>()
             {
-                new Person() {FirstName = "Wojciech", LastName = "FromDatabase"}
+                new Person() {FirstName = "Wojciech", LastName = "FromDatabase"},
+                new Person() {FirstName = "Wojciech2", LastName = "FromDatabase2"}
             };
+        }
+
+        public void DoDBStuff()
+        {
+            
         }
     }
 }

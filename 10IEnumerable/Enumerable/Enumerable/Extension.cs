@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Enumerable.Extensions;
+
 
 namespace Enumerable
 {
@@ -19,19 +22,13 @@ namespace Enumerable
         }
     }
 
-    public static class AdderExtension
-    {
-        public static int Subtraction(this IAdder adder, int a, int b)
-        {
-            return adder.Add(a, -b);
-        }
-    }
-
     public static class Extension
     {
         public static void RunTest()
         {
             var math = new MyMath();
+
+
 
             System.Console.WriteLine(math.Add(4, 2));
             System.Console.WriteLine(math.Subtraction(4, 2));

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdderExtension.cs" />
     <Compile Include="CollectionProcessing.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="Function.cs" />

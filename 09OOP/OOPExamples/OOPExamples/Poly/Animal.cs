@@ -19,7 +19,8 @@ namespace OOPExamples.Poly
 
         public virtual void Move()
         {
-            System.Console.WriteLine($"{_name} moving .....");
+            System.Console.WriteLine($"{_name} is moving .....");
+
         }
     }
 
@@ -30,7 +31,8 @@ namespace OOPExamples.Poly
             var animals = new List<Animal>()
             {
                 new Dog("Azor"),
-                new Cat("Flafy")
+                new Cat("Flafy"),
+                new GermanShepard("Nora")
             };
 
             foreach (var animal in animals)
@@ -41,9 +43,11 @@ namespace OOPExamples.Poly
 
             /////////////////////////////////////////////////
             var myAnimal = animals[0];
-            if (myAnimal is Cat)
+            if (myAnimal is Dog)
             {
-                Console.WriteLine("My animal is cat");                
+                Console.WriteLine("My animal is dog");
+                Dog myDog = (Dog) myAnimal;
+                myDog.EatBone();
             }
 
             /////////////////////////////////////////////////

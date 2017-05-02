@@ -99,6 +99,7 @@ namespace Enumerable
         {
             Console.WriteLine("Operation started");
             var result = operation(a, b);
+
             Console.WriteLine("Operation finish");
             return result;
         }

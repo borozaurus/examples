@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOPExamples.Poly
 {
+    public sealed class GermanShepard : Dog
+    {
+        public GermanShepard(string name) : base(name)
+        {
+        }
+    }
+
     public class Dog : Animal
     {
         public Dog(string name) : base(name)
