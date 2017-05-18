@@ -61,6 +61,7 @@ namespace IO
             {
                 file = fileinfo.OpenWrite();
                 file.WriteByte(0xF);
+
             }
             finally
             {

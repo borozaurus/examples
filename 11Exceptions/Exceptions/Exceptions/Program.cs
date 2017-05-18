@@ -56,6 +56,7 @@ namespace Exceptions
         {
             try
             {
+                
                 return array[index];
             }
             catch (System.IndexOutOfRangeException e)
