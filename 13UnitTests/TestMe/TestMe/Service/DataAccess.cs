@@ -13,7 +13,7 @@ namespace TestMe.Service
     {
         private const string FileName = "account.json";
 
-        public BankAccount LoadBankAccount()
+        public BankAccount LoadBankAccount(int id)
         {
             var fileBody = File.ReadAllText(FileName);
             return JsonConvert.DeserializeObject<BankAccount>(fileBody);

@@ -31,18 +31,25 @@ namespace TestMe.Logic
 
         public string GetAccountData()
         {
-            var account = _dataAccess.LoadBankAccount();
-            return $"Bank account own by {account.OwnerName} {Environment.NewLine}" +
-                $"Number {account.Number} {Environment.NewLine}" +
-                $"Value {account.Value}";
+            try
+            {
+                var account = _dataAccess.LoadBankAccount(1);
+                return $"Bank account own by {account.OwnerName} {Environment.NewLine}" +
+                       $"Number {account.Number} {Environment.NewLine}" +
+                       $"Value {account.Value}";
+            }
+            catch (Exception e)
+            {
+                return string.Empty;
+            }
         }
 
         public void DepositAmount(decimal amount)
         {
-            if (amount < 0)
+            if (amount <= 0)
                 throw new InvalidAmountException ("amount should be greater then 0");
 
-            var account = _dataAccess.LoadBankAccount();
+            var account = _dataAccess.LoadBankAccount(1);
 
             account.Value += amount;
 
@@ -54,7 +61,7 @@ namespace TestMe.Logic
             if (amount <= 0)
                 throw new InvalidAmountException("amount should be greater then 0");
 
-            var account = _dataAccess.LoadBankAccount();
+            var account = _dataAccess.LoadBankAccount(1);
 
             if (account.Value < amount)
                 return false;

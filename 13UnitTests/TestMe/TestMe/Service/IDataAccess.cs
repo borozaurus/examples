@@ -4,7 +4,7 @@ namespace TestMe.Service
 {
     public interface IDataAccess
     {
-        BankAccount LoadBankAccount();
+        BankAccount LoadBankAccount(int id);
         void SaveBankAccount(BankAccount account);
     }
 }
